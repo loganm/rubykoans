@@ -22,9 +22,9 @@ class AboutNil < Neo::Koan
   end
 
   def test_nil_has_a_few_methods_defined_on_it
-    assert_equal __, nil.nil?
-    assert_equal __, nil.to_s
-    assert_equal __, nil.inspect
+    assert_equal true, nil.nil?
+    assert_equal '', nil.to_s
+    assert_equal 'nil', nil.inspect
 
     # THINK ABOUT IT:
     #
@@ -33,6 +33,9 @@ class AboutNil < Neo::Koan
     # or
     #    obj == nil
     # Why?
+
+    # It's better to use obj.nil? because it's easier to read, more semantic
+    # and it runs faster, so that's a bonus.
   end
 
 end
